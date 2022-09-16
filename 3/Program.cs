@@ -8,7 +8,8 @@ void FillArray(int[,,] matr)
         for (int j = 0; j < matr.GetLength(1); j++)
             for (int k = 0; k < matr.GetLength(2); k++)
             {
-                matr[i, j, k] = new Random().Next(0, 10);
+                matr[i, j, k] = count;
+                count++;
             }
 }
 
@@ -23,7 +24,6 @@ void PrintArray(int[,,] matr)
         }
 }
 
-Console.Clear();
 Console.Write("Введите количество строк: ");
 int a = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
